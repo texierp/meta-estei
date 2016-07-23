@@ -16,4 +16,4 @@ IMAGE_INSTALL += " \
 
 PACKAGE_EXCLUDE = "packagegroup-base-extended"
 
-export IMAGE_BASENAME = "basic-image"
+export IMAGE_BASENAME = "base-image"

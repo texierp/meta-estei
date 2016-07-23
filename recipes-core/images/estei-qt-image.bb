@@ -1,7 +1,7 @@
 DESCRIPTION = "Qt image"
 LICENSE = "MIT"
 
-require estei-basic-image.bb
+require estei-base-image.bb
 
 IMAGE_INSTALL += "\
 	packagegroup-core-full-cmdline \
