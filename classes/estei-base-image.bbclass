@@ -10,6 +10,9 @@ IMAGE_FEATURES += "debug-tweaks package-management ssh-server-dropbear splash"
 IMAGE_INSTALL += " \
 	kernel-modules \
 	openssh-sftp-server \
+	packagegroup-core-full-cmdline \
+	packagegroup-distro-base \
+	packagegroup-machine-base \
 	packagegroup-estei-base \
     	${CORE_IMAGE_EXTRA_INSTALL} \
 "

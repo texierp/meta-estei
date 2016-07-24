@@ -1,12 +1,9 @@
 DESCRIPTION = "Qt image"
 LICENSE = "MIT"
 
-require estei-base-image.bb
+inherit estei-base-image
 
 IMAGE_INSTALL += "\
-	packagegroup-core-full-cmdline \
-	packagegroup-distro-base \
-	packagegroup-machine-base \
 	packagegroup-qt5-toolchain-target \
 "
 
