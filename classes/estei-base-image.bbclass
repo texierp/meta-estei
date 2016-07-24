@@ -10,6 +10,7 @@ IMAGE_FEATURES += "debug-tweaks package-management ssh-server-dropbear splash"
 IMAGE_INSTALL += " \
 	kernel-modules \
 	openssh-sftp-server \
+	tzdata \
 	packagegroup-core-full-cmdline \
 	packagegroup-distro-base \
 	packagegroup-machine-base \
@@ -18,5 +19,13 @@ IMAGE_INSTALL += " \
 "
 
 PACKAGE_EXCLUDE = "packagegroup-base-extended"
+
+set_local_timezone() {
+    ln -sf /usr/share/zoneinfo/Europe/Paris ${IMAGE_ROOTFS}/etc/localtime
+}
+
+ROOTFS_POSTPROCESS_COMMAND += " \
+    set_local_timezone ; \
+ "
 
 export IMAGE_BASENAME = "base-image"
