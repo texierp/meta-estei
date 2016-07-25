@@ -11,4 +11,6 @@ S = "${WORKDIR}"
 
 PR = "r0"
 
+DEPENDS = " qtbase"
+
 inherit qmake5
