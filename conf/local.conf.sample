@@ -1,0 +1,74 @@
+
+MACHINE ??= "zedboard-zynq7"
+
+# Where to place downloads
+#
+#
+# The default is a downloads directory under TOPDIR which is the build directory.
+#
+DL_DIR ?= "${TOPDIR}/downloads"
+
+#INHERIT += "own-mirrors"
+#SOURCE_MIRROR_URL = "http://example.com/my-source-mirror"
+#
+# Where to place shared-state files
+#
+# BitBake has the capability to accelerate builds based on previously built output.
+# This is done using "shared state" files which can be thought of as cache objects
+# and this option determines where those files are placed.
+#
+# You can wipe out TMPDIR leaving this directory intact and the build would regenerate
+# from these files if no changes were made to the configuration. If changes were made
+# to the configuration, only shared state files where the state was still valid would
+# be used (done using checksums).
+#
+# The default is a sstate-cache directory under TOPDIR.
+#
+#SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
+
+#
+# Where to place the build output
+#
+# This option specifies where the bulk of the building work should be done and
+# where BitBake should place its temporary files and output. Keep in mind that
+# this includes the extraction and compilation of many applications and the toolchain
+# which can use Gigabytes of hard disk space.
+#
+# The default is a tmp directory under TOPDIR.
+#
+#TMPDIR = "${TOPDIR}/tmp"
+
+DISTRO ?= "poky"
+PACKAGE_CLASSES ?= "package_rpm"
+
+BB_NUMBER_THREADS = '8'
+PARALLEL_MAKE = '-j 8'
+
+DISTRO_FEATURES_remove = "x11 wayland"
+
+#
+# SDK target architecture
+#SDKMACHINE ?= "x86_64"
+
+EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+
+PATCHRESOLVE = "noop"
+
+BB_DISKMON_DIRS = "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
+    ABORT,${TMPDIR},100M,1K \
+    ABORT,${DL_DIR},100M,1K \
+    ABORT,${SSTATE_DIR},100M,1K \
+    ABORT,/tmp,10M,1K"
+
+PACKAGECONFIG_append_pn-qemu-native = " sdl"
+PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
+
+# CONF_VERSION is increased each time build/conf/ changes incompatibly and is used to
+# track the version of this file when it was generated. This can safely be ignored if
+# this doesn't mean anything to you.
+CONF_VERSION = "1"
+

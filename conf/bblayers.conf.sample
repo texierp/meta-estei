@@ -1,0 +1,16 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  /media/pjtexier/EmbeddedLinux/yocto/poky/meta \
+  /media/pjtexier/EmbeddedLinux/yocto/poky/meta-poky \
+  /media/pjtexier/EmbeddedLinux/yocto/poky/meta-yocto-bsp \
+  /media/pjtexier/EmbeddedLinux/yocto/zedboard/sources/meta-xilinx \
+  /media/pjtexier/EmbeddedLinux/yocto/zedboard/sources/meta-estei \
+  /media/pjtexier/EmbeddedLinux/yocto/zedboard/sources/meta-qt5 \
+  /media/pjtexier/EmbeddedLinux/yocto/zedboard/sources/meta-openembedded/meta-oe \
+  "
