@@ -41,10 +41,15 @@ DL_DIR ?= "${TOPDIR}/downloads"
 DISTRO ?= "poky"
 PACKAGE_CLASSES ?= "package_rpm"
 
-BB_NUMBER_THREADS = '8'
-PARALLEL_MAKE = '-j 8'
+BB_NUMBER_THREADS = '4'
+PARALLEL_MAKE = '-j 4'
 
-DISTRO_FEATURES_remove = "x11 wayland"
+DISTRO_FEATURES_remove = "x11"
+DISTRO_FEATURES_remove = "wayland"
+DISTRO_FEATURES_remove = "opengl"
+DISTRO_FEATURES_remove = "zeroconf"
+DISTRO_FEATURES_remove = "pulseaudio"
+
 
 #
 # SDK target architecture
@@ -71,4 +76,6 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 # track the version of this file when it was generated. This can safely be ignored if
 # this doesn't mean anything to you.
 CONF_VERSION = "1"
+
+RM_OLD_IMAGE = "1"
 
