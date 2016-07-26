@@ -5,7 +5,7 @@ inherit core-image
 
 SPLASH = "psplash-estei"
 
-IMAGE_FEATURES += "debug-tweaks package-management ssh-server-dropbear splash"
+IMAGE_FEATURES += "debug-tweaks package-management ssh-server-openssh splash"
 
 IMAGE_INSTALL += " \
 	kernel-modules \
