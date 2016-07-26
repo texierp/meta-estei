@@ -1,0 +1,33 @@
+DISTRO = "estei"
+DISTRO_NAME = "ESTEI Bordeaux"
+DISTRO_VERSION = "v1.0.0"
+SDK_VENDOR = "-estei"
+SDK_VERSION := "${DISTRO_VERSION}"
+
+MAINTAINER = "Pierre-Jean TEXIER <pjtexier@amplitude-systemes.com>"
+
+LOCALCONF_VERSION = "1"
+LAYER_CONF_VERSION ?= "6"
+
+#PREMIRRORS ?=
+#MIRRORS =+ ""
+
+# The CONNECTIVITY_CHECK_URI's are used to test whether we can succesfully
+# fetch from the network (and warn you if not). To disable the test set
+# the variable to be empty.
+# Git example url: git://git.yoctoproject.org/yocto-firewall-test;protocol=git;rev=HEAD
+
+CONNECTIVITY_CHECK_URIS ?= ""
+
+SANITY_TESTED_DISTROS ?= " \
+            Ubuntu 12.04 LTS \n \
+            Ubuntu 12.04.1 LTS \n \
+            Ubuntu 12.04.3 LTS \n \
+            Ubuntu 14.04.1 LTS \n \
+            Ubuntu 14.04.2 LTS \n \
+            Ubuntu 14.04.3 LTS \n \
+            Ubuntu 14.04.4 LTS \n \
+            Ubuntu-14.04 \n \
+	    "
+
+
