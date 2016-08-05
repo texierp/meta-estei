@@ -6,7 +6,7 @@ BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
 BBLAYERS ?= " \
-  /media/pjtexier/EmbeddedLinux/yocto/poky/meta \
+  ##OEROOT##/yocto/poky/meta \
   /media/pjtexier/EmbeddedLinux/yocto/poky/meta-poky \
   /media/pjtexier/EmbeddedLinux/yocto/poky/meta-yocto-bsp \
   /media/pjtexier/EmbeddedLinux/yocto/zedboard/sources/meta-xilinx \
