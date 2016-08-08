@@ -1,0 +1,1 @@
+inherit estei-base-image
