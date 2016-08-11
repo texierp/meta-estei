@@ -1,3 +1,3 @@
 
-PACKAGECONFIG_append = " tools libinput linuxfb"
-PACKAGECONFIG_remove = " gl gles2 icu x11"
+PACKAGECONFIG_append = " libinput linuxfb"
+PACKAGECONFIG_remove = " gl icu x11"
