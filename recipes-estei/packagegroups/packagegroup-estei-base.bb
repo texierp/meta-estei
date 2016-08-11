@@ -8,5 +8,4 @@ inherit packagegroup
 RDEPENDS_${PN} = "\
     	spitools  \
     	i2c-tools \
-	v4l-utils \
 "
