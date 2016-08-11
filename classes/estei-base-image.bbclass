@@ -20,6 +20,10 @@ IMAGE_FEATURES += "splash"
 
 CORE_OS_INSTALL = " \
     	tzdata \
+    	dbus \
+    	sysfsutils \
+    	mtd-utils \
+    	mtd-utils-ubifs \
  "
 
 KERNEL_EXTRA_INSTALL = " \
@@ -40,9 +44,8 @@ WIFI_SUPPORT_INSTALL = " \
 IMAGE_INSTALL += " \
 	${CORE_OS_INSTALL} \
 	${KERNEL_EXTRA_INSTALL} \
-	${@bb.utils.contains("MACHINE_FEATURES", "wifi", "${WIFI_SUPPORT_INSTALL}", "" ,d)} \
+	{WIFI_SUPPORT_INSTALL} \
 	openssh-sftp-server \
-	packagegroup-core-full-cmdline \
 	packagegroup-distro-base \
 	packagegroup-machine-base \
 	packagegroup-estei-base \
