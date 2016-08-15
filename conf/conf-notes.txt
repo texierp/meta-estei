@@ -1,0 +1,14 @@
+Common targets are:
+    estei-base-image
+    estei-qt-image
+    meta-toolchain-qt5
+
+You can also run generated qemu images with a command like 'runqemu qemuarm'
+
+ _____ ____ _____ _____ ___ 
+| ____/ ___|_   _| ____|_ _|
+|  _| \___ \ | | |  _|  | | 
+| |___ ___) || | | |___ | | 
+|_____|____/ |_| |_____|___|
+
+
