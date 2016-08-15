@@ -44,7 +44,7 @@ WIFI_SUPPORT_INSTALL = " \
 IMAGE_INSTALL += " \
 	${CORE_OS_INSTALL} \
 	${KERNEL_EXTRA_INSTALL} \
-	{WIFI_SUPPORT_INSTALL} \
+	${WIFI_SUPPORT_INSTALL} \
 	openssh-sftp-server \
 	packagegroup-distro-base \
 	packagegroup-machine-base \
