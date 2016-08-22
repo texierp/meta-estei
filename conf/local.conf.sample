@@ -71,7 +71,7 @@ MACHINE ??= "zedboard-zynq7"
 #
 # The default is a downloads directory under TOPDIR which is the build directory.
 #
-#DL_DIR ?= "${TOPDIR}/downloads"
+DL_DIR ?= "${BSPDIR}/downloads/"
 
 #
 # Where to place shared-state files

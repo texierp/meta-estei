@@ -4,10 +4,7 @@ LICENSE = "MIT"
 inherit estei-base-image
 
 IMAGE_INSTALL += "\
-	qtbase \
-	qtbase-plugins \
-	qtbase-tools \
-	qtbase-fonts \
+	packagegroup-qt5 \
 	qt-simple-application \
 "
 
