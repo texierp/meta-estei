@@ -13,7 +13,7 @@ inherit core-image
 IMAGE_FEATURES += "package-management"
 
 # SSH gesture
-IMAGE_FEATURES += "ssh-server-openssh"
+IMAGE_FEATURES += "ssh-server-dropbear"
 
 # To Include splash at boot-up
 IMAGE_FEATURES += "splash"
@@ -24,6 +24,7 @@ CORE_OS_INSTALL = " \
     	sysfsutils \
     	mtd-utils \
     	mtd-utils-ubifs \
+    	dnsmasq \
  "
 
 KERNEL_EXTRA_INSTALL = " \
