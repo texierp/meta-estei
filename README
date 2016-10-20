@@ -24,10 +24,14 @@ This layer depends on:
 Patches
 =======
 
-Please submit any patches against the estei layer to the
-xxxx mailing list (xxxx@zzzz.org) and cc: the maintainer:
+Patches
+=======
 
-Maintainer: Pierre-Jean TEXIER <pjtexier at amplitude-systemes.com>
+Please submit any patches against the iot layer to the maintainer:
+
+Maintainer: 
+
+	- Pierre-Jean TEXIER <texier.pj2@gmail.com>
 
 Table of Contents
 =================
